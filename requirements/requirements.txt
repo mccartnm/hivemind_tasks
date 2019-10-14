@@ -1,0 +1,2 @@
+# hmmm
+# git+https://github.com/mccartnm/hivemind#egg=hivemind
