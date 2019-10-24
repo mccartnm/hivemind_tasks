@@ -45,7 +45,7 @@ class TaskNode(_Node):
         .. code-block:: python
 
             # In our hive nodes/sometasks/sometasks.py
-            from hivemind.features.task import TaskNode
+            from hivemind_tasks import TaskNode
 
             class SomeTasks(TaskNode):
                 # -- With a class attribute
@@ -279,3 +279,14 @@ class TaskNode(_Node):
 
 
 _Node.mark_abstract(TaskNode)
+
+# -- Web API (probably move?)
+
+from hivemind.util._webtoolkit import API
+API.register_to_category('topics', 'tasks', {
+    'no_lookup' : True,
+    'title' : 'Tasks',
+    'description' : 'Manage tasks being run across your Task Nodes',
+    'index_url' : '/tasks',
+    'index_url_title' : 'Go To Tasks'
+})

@@ -53,6 +53,8 @@ class TaskFeature(_Feature):
 
     static_files = './static'
 
+    feature_image = './static/feature.svg'
+
     # -- _Feature overrides
 
     def endpoints(self) -> tuple:
